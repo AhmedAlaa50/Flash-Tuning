@@ -24,10 +24,10 @@ export default function NavBar() {
         </li>
         <li
           className={
-            location.pathname === "/ecu-flashing-services" ? classes.active : ""
+            location.pathname === "/ecu-flashing" ? classes.active : ""
           }
         >
-          <Link to="/ecu-flashing-services">ECU Flashing Services</Link>
+          <Link to="/ecu-flashing">ECU Flashing</Link>
         </li>
         <li
           className={
@@ -40,9 +40,6 @@ export default function NavBar() {
           className={location.pathname === "/dyno-tuning" ? classes.active : ""}
         >
           <Link to="/dyno-tuning">Dyno Tuning</Link>
-        </li>
-        <li className={location.pathname === "/contact" ? classes.active : ""}>
-          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
