@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import OptionsList from "./OptionsList";
 import SearchProductContext from "../../context/SearchProductContext";
@@ -6,9 +6,6 @@ import { ProductOptions } from "../../data/ProductOptions";
 
 export default function SearchProduct() {
   const { formState, changeOptionHandler } = useContext(SearchProductContext);
-  useEffect(() => {
-    console.log(Object.values(ProductOptions["Yamaha"]));
-  }, [formState.make, formState.model]);
   return (
     <form>
       <div>
