@@ -1,24 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import OptionsList from "./OptionsList";
+import SearchProductContext from "../../context/SearchProductContext";
 
 export default function SearchProduct() {
-  const [formState, setFormState] = useState({
-    make: "",
-    model: "",
-    year: "",
-  });
-  useEffect(() => {
-    console.log(formState);
-  }, [formState]);
-
-  function changeOptionHandler(word, value) {
-    if (word === "make") {
-      setFormState({ make: value, model: "", year: "" });
-    } else if (word === "model") {
-      setFormState({ ...formState, model: value, year: "" });
-    } else setFormState({ ...formState, year: value });
-  }
+  const { formState, changeOptionHandler } = useContext(SearchProductContext);
 
   return (
     <form>
