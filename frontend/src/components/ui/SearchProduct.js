@@ -1,29 +1,38 @@
-import { useEffect, useState, useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import OptionsList from "./OptionsList";
 import SearchProductContext from "../../context/SearchProductContext";
+import { ProductOptions } from "../../data/ProductOptions";
 
 export default function SearchProduct() {
   const { formState, changeOptionHandler } = useContext(SearchProductContext);
-
+  useEffect(() => {
+    console.log(Object.values(ProductOptions["Yamaha"]));
+  }, [formState.make, formState.model]);
   return (
     <form>
       <div>
         <OptionsList
           word={"make"}
-          options={["Yamaha", "Triumph", "Suzuki", "Kawasaki", "Honda"]}
+          options={Object.keys(ProductOptions)}
           enabled={true}
           changeOptionHandler={changeOptionHandler}
         />
         <OptionsList
           word={"model"}
-          options={["R1", "R6", "MT-09", "MT-07", "MT-03"]}
+          options={
+            formState.make ? Object.keys(ProductOptions[formState.make]) : [""]
+          }
           enabled={formState.make}
           changeOptionHandler={changeOptionHandler}
         />
         <OptionsList
           word={"year"}
-          options={["2022", "2021", "2020", "2019", "2018"]}
+          options={
+            formState.make && formState.model
+              ? ProductOptions[formState.make][formState.model]
+              : [""]
+          }
           enabled={formState.model && formState.make}
           changeOptionHandler={changeOptionHandler}
         />
