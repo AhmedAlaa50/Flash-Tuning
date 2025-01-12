@@ -1,0 +1,37 @@
+/* Styling for the container holding the label and select box */
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label styling */
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Select dropdown styling */
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+/* Disabled select styling */
+select:disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Focus state */
+select:focus {
+  outline: none;
+  border-color: #f00; /* Matches brand color */
+}
