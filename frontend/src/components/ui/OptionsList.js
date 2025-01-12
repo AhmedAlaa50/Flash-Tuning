@@ -1,5 +1,7 @@
 import { useEffect, useContext } from "react";
 
+import classes from "../../css/OptionsList.module.css";
+
 import {
   capitalizeFirstLetter,
   capitalizeAll,
@@ -15,7 +17,7 @@ export default function OptionsList({
   const { formState } = useContext(SearchProductContext);
   useEffect(() => {}, [formState.make, formState.model]);
   return (
-    <div>
+    <div className={classes.container}>
       <label htmlFor={word}>{capitalizeAll(word)}</label>
       <select
         id={word}

@@ -1,4 +1,4 @@
-import classes from "./Video.module.css";
+import classes from "../../css/Video.module.css";
 
 export default function Video({ youtubeID }) {
   return (
