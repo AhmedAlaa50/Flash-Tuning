@@ -28,7 +28,7 @@ export default function OptionsList({
         //get the selected value and pass it to the changeOptionHandler
         onChange={(event) => changeOptionHandler(word, event.target.value)}
       >
-        <option value={""}>All</option>
+        <option value={""}>Select {capitalizeFirstLetter(word)}</option>
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}
