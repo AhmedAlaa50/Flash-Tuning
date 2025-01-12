@@ -4,6 +4,7 @@ import OptionsList from "./OptionsList";
 import SearchProductContext from "../../context/SearchProductContext";
 import { ProductOptions } from "../../data/ProductOptions";
 import ConfirmProductBtn from "../buttons/ConfirmProductBtn";
+import ClearChoicesBtn from "../buttons/ClearChoicesBtn";
 import classes from "../../css/SearchProduct.module.css";
 
 export default function SearchProduct() {
@@ -35,9 +36,12 @@ export default function SearchProduct() {
           enabled={formState.model && formState.make}
           changeOptionHandler={changeOptionHandler}
         />
-        <ConfirmProductBtn
-          enabled={formState.model && formState.make && formState.year}
-        />
+        <div className={classes.buttons}>
+          <ClearChoicesBtn />
+          <ConfirmProductBtn
+            enabled={formState.model && formState.make && formState.year}
+          />
+        </div>
       </form>
     </div>
   );

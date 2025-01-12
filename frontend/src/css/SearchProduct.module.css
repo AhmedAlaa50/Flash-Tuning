@@ -10,7 +10,7 @@
   max-width: 800px;
 }
 
-/* Form styling (kept for context) */
+/* Form styling */
 .form {
   display: flex;
   flex-direction: column;
@@ -18,21 +18,33 @@
   width: 100%;
 }
 
-/* General styling for the form */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Spacing between options */
+/* Spacing between form elements */
 form > * {
   margin-bottom: 1rem;
+}
+
+/* Buttons container styling */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 1rem;
+}
+
+/* Style overrides for buttons if needed */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+  transform: scale(1.05);
 }

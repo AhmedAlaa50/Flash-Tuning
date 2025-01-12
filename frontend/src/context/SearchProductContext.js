@@ -17,9 +17,13 @@ export function SearchProductContextProvider({ children }) {
       setFormState({ ...formState, model: value, year: "" });
     } else setFormState({ ...formState, year: value });
   }
+  function resetChoicesHandler() {
+    setFormState({ make: "", model: "", year: "" });
+  }
   const context = {
     formState,
     changeOptionHandler,
+    resetChoicesHandler,
   };
 
   useEffect(() => {

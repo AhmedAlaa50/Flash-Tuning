@@ -1,14 +1,33 @@
-/* Button styling */
-button {
+/* Default button styling */
+.button {
+  display: inline-block;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #000; /* Matches brand color */
+  background-color: #ccc; /* Default color for when no values are selected */
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Black color when formState contains values */
+.black {
+  background-color: #000; /* Black color */
+}
+.black:hover:not(:disabled),
+.black:focus:not(:disabled) {
+  background-color: #333; /* Slightly darker black on hover */
+}
+
+/* Green color after the button is clicked */
+.green {
+  background-color: #28a745; /* Green color */
+}
+.green:hover:not(:disabled),
+.green:focus:not(:disabled) {
+  background-color: #218838; /* Slightly darker green on hover */
 }
 
 /* Disabled button styling */
@@ -18,13 +37,12 @@ button:disabled {
 }
 
 /* Hover and focus states */
-button:hover:not(:disabled),
-button:focus:not(:disabled) {
-  background-color: #f00; /* Matches brand color */
+.button:hover:not(:disabled),
+.button:focus:not(:disabled) {
   transform: scale(1.05);
 }
 
 /* Active state */
-button:active:not(:disabled) {
+.button:active:not(:disabled) {
   transform: scale(0.95);
 }

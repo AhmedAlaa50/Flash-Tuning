@@ -1,0 +1,39 @@
+/* General button styling */
+button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f00; /* Red for emphasis */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem; /* Adds spacing if used inside a form */
+}
+
+/* Disabled button state */
+button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Hover and focus states */
+button:hover:not(:disabled),
+button:focus:not(:disabled) {
+  background-color: #c00; /* Slightly darker red on hover */
+  transform: scale(1.05); /* Subtle hover effect */
+  outline: none;
+}
+
+/* Active state */
+button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* Additional styling for spacing when inside a form */
+button + button {
+  margin-left: 1rem; /* Adds spacing if there are multiple buttons */
+}
