@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import classes from "./NavBar.module.css"; // Import the CSS module
 import logo from "../../assets/ft2.jpg"; // Import the logo image
+import { BUSINESS_NAME } from "../../data/Constants";
 
 export default function NavBar() {
   const location = useLocation(); // Get the current route
@@ -9,7 +10,7 @@ export default function NavBar() {
     <nav className={classes.navbar}>
       <div className={classes.logoContainer}>
         <img src={logo} alt="Flash-Tuning Logo" className={classes.logo} />
-        <h1 className={classes.title}>Flash Tuning</h1>
+        <h1 className={classes.title}>{BUSINESS_NAME}</h1>
       </div>
       <ul className={classes.navLinks}>
         <li className={location.pathname === "/" ? classes.active : ""}>

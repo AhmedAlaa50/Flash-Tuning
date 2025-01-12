@@ -1,11 +1,11 @@
 .video {
-    width: 90%; /* Responsive width */
-    height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-    max-height: 600px; /* Limit height for larger screens */
-    border: none; /* Remove default border */
-    margin: 0 auto; /* Center horizontally */
-    display: block; /* Ensures proper alignment */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 8px; /* Optional: Add rounded corners */
-  }
-  
+  width: 90%; /* Responsive width */
+  height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+  max-height: 300px; /* Limit height for larger screens */
+  border: none; /* Remove default border */
+  padding-top: 1rem; /* Add space above video */
+  margin: 0 auto; /* Center horizontally */
+  display: block; /* Ensures proper alignment */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}

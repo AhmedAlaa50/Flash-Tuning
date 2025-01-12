@@ -1,45 +1,46 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    padding: 1rem 2rem;
-    color: #fff;
-  }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 50px;
-    margin-right: 1rem;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 3rem;
-  }
-  
-  .navLinks a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-  }
-  
-  .navLinks a:hover {
-    color: #f00; /* Match the red lightning bolt in the logo */
-  }
-  
-  .active a {
-    color: #f00; /* Highlight the active page */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #f00; /* Match the red lightning bolt in the logo */
+}
+
+.active a {
+  color: #f00; /* Highlight the active page */
+}
