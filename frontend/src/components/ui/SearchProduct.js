@@ -3,12 +3,14 @@ import { useContext } from "react";
 import OptionsList from "./OptionsList";
 import SearchProductContext from "../../context/SearchProductContext";
 import { ProductOptions } from "../../data/ProductOptions";
+import ConfirmProductBtn from "../buttons/ConfirmProductBtn";
+import classes from "../../css/SearchProduct.module.css";
 
 export default function SearchProduct() {
   const { formState, changeOptionHandler } = useContext(SearchProductContext);
   return (
-    <form>
-      <div>
+    <div className={classes.container}>
+      <form className={classes.form}>
         <OptionsList
           word={"make"}
           options={Object.keys(ProductOptions)}
@@ -33,7 +35,10 @@ export default function SearchProduct() {
           enabled={formState.model && formState.make}
           changeOptionHandler={changeOptionHandler}
         />
-      </div>
-    </form>
+        <ConfirmProductBtn
+          enabled={formState.model && formState.make && formState.year}
+        />
+      </form>
+    </div>
   );
 }
