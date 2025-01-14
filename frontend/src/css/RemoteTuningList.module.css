@@ -1,0 +1,25 @@
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.dropdownList li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.3s;
+}
+
+.dropdownList li a:hover {
+  color: #f00;
+}

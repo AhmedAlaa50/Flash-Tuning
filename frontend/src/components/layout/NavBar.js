@@ -1,10 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import classes from "./NavBar.module.css"; // Import the CSS module
 import logo from "../../assets/ft2.jpg"; // Import the logo image
 import { BUSINESS_NAME } from "../../data/Constants";
+import RemoteTuningList from "../ui/RemoteTuningList";
 
 export default function NavBar() {
   const location = useLocation(); // Get the current route
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible((prevState) => !prevState);
+  };
 
   return (
     <nav className={classes.navbar}>
@@ -31,11 +38,16 @@ export default function NavBar() {
           <Link to="/ecu-flashing">ECU Flashing</Link>
         </li>
         <li
-          className={
+          className={`${classes.dropdown} ${
             location.pathname === "/remote-tuning" ? classes.active : ""
-          }
+          }`}
+          onMouseEnter={toggleDropdown}
+          onMouseLeave={toggleDropdown}
         >
-          <Link to="/remote-tuning">Remote Tuning</Link>
+          <span className={classes.dropdownLabel}>Remote Tuning</span>
+          {isDropdownVisible && (
+            <RemoteTuningList toggleDropdown={toggleDropdown} />
+          )}
         </li>
         <li
           className={location.pathname === "/dyno-tuning" ? classes.active : ""}
