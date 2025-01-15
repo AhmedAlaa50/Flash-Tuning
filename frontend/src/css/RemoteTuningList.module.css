@@ -1,3 +1,4 @@
+/* Dropdown list container */
 .dropdownList {
   position: absolute;
   top: 100%;
@@ -13,6 +14,7 @@
   z-index: 1000;
 }
 
+/* Individual dropdown items */
 .dropdownList li a {
   color: #fff;
   text-decoration: none;
@@ -20,6 +22,12 @@
   transition: color 0.3s;
 }
 
+/* Hover effect for dropdown items */
 .dropdownList li a:hover {
   color: #f00;
+}
+
+/* Highlight for the active item */
+.active {
+  font-weight: bold; /* Optional: Make the chosen option bold */
 }

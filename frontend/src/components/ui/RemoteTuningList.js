@@ -1,22 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
+import { capitalizeFirstLetter } from "../../utils/CapitalizeString";
 import classes from "../../css/RemoteTuningList.module.css";
 
 export default function RemoteTuningList() {
+  const remoteTuningList = ["honda", "kawasaki", "suzuki", "yamaha"];
+  const location = useLocation();
   return (
     <ul className={classes.dropdownList}>
-      <li>
-        <Link to="/remote-tuning/honda">Honda Tuning</Link>
-      </li>
-      <li>
-        <Link to="/remote-tuning/kawasaki">Kawasaki Tuning</Link>
-      </li>
-      <li>
-        <Link to="/remote-tuning/suzuki">Suzuki Tuning</Link>
-      </li>
-      <li>
-        <Link to="/remote-tuning/yamaha">Yamaha Tuning</Link>
-      </li>
+      {remoteTuningList.map((tuning, index) => (
+        <li
+          key={index}
+          className={
+            tuning == location.pathname.substring(15) ? classes.active : ""
+          }
+        >
+          <Link to={`/remote-tuning/${tuning}`}>
+            {capitalizeFirstLetter(tuning)} Tuning
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 }
