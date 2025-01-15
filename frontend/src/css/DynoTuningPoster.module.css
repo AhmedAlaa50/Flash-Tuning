@@ -1,0 +1,20 @@
+/* Container for the poster */
+.posterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 25%; /* Adds spacing around the poster */
+  padding: 1rem;
+  /* max-width: 50%; */
+  background-color: #111; /* Dark background for contrast */
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Poster image styling */
+.posterContainer img {
+  max-width: 100%; /* Limits the width of the image to 50% of the container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 5px; /* Rounds the image corners slightly */
+  border: 2px solid #333; /* Subtle border around the image */
+}

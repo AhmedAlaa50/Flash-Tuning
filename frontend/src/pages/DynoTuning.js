@@ -1,7 +1,9 @@
+import DynoTuningPoster from "../components/ui/DynoTuningPoster";
+
 export default function DynoTuningPage() {
   return (
     <div>
-      <h1>Dyno Tuning</h1>
+      <DynoTuningPoster />
     </div>
   );
 }
