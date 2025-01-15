@@ -1,0 +1,47 @@
+/* Container for Step 3 */
+.stepContainer {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #222; /* Slightly lighter than the parent container */
+  color: #fff; /* White text for readability */
+  border: 1px solid #333; /* Subtle border for structure */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+}
+
+/* Heading for Step 3 */
+.stepHeading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f00; /* Red to align with branding */
+  margin-bottom: 1.5rem;
+}
+
+/* Container for contact information */
+.contactContainer {
+  display: flex;
+  flex-direction: row; /* Stack contact details vertically */
+  justify-content: space-evenly; /* Distribute space between items */
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #333; /* Slightly darker background for separation */
+  border-radius: 8px;
+}
+
+/* Individual contact text styling */
+.contactText {
+  font-size: 1.5rem;
+  color: #fff; /* White text for visibility */
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Link styling for email */
+.contactText a {
+  color: #00f; /* Blue for links */
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.contactText a:hover {
+  color: #ffa500; /* Orange on hover for better visibility */
+}

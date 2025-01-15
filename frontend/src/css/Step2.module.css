@@ -1,0 +1,36 @@
+/* Container for Step 2 */
+.stepContainer {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #222; /* Slightly lighter than the parent container */
+  color: #fff; /* White text for readability */
+  border: 1px solid #333; /* Subtle border for structure */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add slight shadow */
+}
+
+/* Heading for Step 2 */
+.stepHeading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f00; /* Red to align with branding */
+  margin-bottom: 1rem;
+}
+
+/* Example text or additional note styling */
+.exampleText {
+  font-size: 1rem;
+  color: #ccc; /* Lighter text for less emphasis */
+  margin-bottom: 1rem;
+}
+
+/* Styling for the additional note paragraph */
+.noteText {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #ffa500; /* Orange color to draw attention to the note */
+  font-style: italic; /* Italicized for emphasis */
+  background-color: #333; /* Slightly darker background for separation */
+  padding: 0.5rem;
+  border-radius: 5px;
+}

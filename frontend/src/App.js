@@ -13,11 +13,16 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/previous-work" element={<PreviousWorkPage />} />
+        <Route path="/ecu-flashing" element={<EcuFlashingPage />} />
         <Route
-          path="/ecu-flashing"
-          element={<EcuFlashingPage />}
-        />
-        <Route path="/remote-tuning" element={<RemoteTuningPage />} />
+          path="/remote-tuning/:remoteTuningOption"
+          element={<RemoteTuningPage />}
+        >
+          <Route path="honda" element={<RemoteTuningPage />} />
+          <Route path="kawaski" element={<RemoteTuningPage />} />
+          <Route path="suzuki" element={<RemoteTuningPage />} />
+          <Route path="yamaha" element={<RemoteTuningPage />} />
+        </Route>
         <Route path="/dyno-tuning" element={<DynoTuningPage />} />
       </Routes>
     </Layout>

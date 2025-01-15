@@ -1,0 +1,30 @@
+/* Styling for the button */
+.button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f00; /* Flash-Tuning branding red */
+  color: #fff; /* White text for contrast */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the button */
+.button:hover {
+  background-color: #d00; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active state for the button */
+.button:active {
+  background-color: #a00; /* Even darker red when clicked */
+  transform: scale(1); /* Return to normal size */
+}
+
+/* Disabled state (if applicable) */
+.button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}

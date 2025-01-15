@@ -1,0 +1,42 @@
+/* Container for the entire steps section */
+.stepsContainer {
+  align-items: center;
+  margin: 2rem auto; /* Center the container and add space */
+  padding: 2rem;
+  min-width: 80%;
+  max-width: 1000px; /* Centers the content and limits the width */
+  background-color: #111; /* Dark background to match branding */
+  color: #fff; /* White text for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  text-align: center; /* Center-align all text */
+}
+
+/* Heading for the section */
+.stepsHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f00; /* Red for consistency with branding */
+  margin-bottom: 2rem;
+  text-transform: uppercase; /* Make the title stand out */
+  letter-spacing: 1px; /* Adds spacing for readability */
+}
+
+/* Divider between steps (optional) */
+.stepDivider {
+  height: 2px;
+  background-color: #333;
+  margin: 1rem auto;
+  width: 80%; /* Shorter than the container width */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .stepsContainer {
+    padding: 1rem;
+  }
+
+  .stepsHeading {
+    font-size: 1.5rem;
+  }
+}

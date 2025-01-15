@@ -1,0 +1,62 @@
+/* Overall container for the component */
+.stepContainer {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #111; /* Dark background for a sleek look */
+    color: #fff; /* White text for contrast */
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Heading for the step */
+  .stepHeading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f00; /* Red text to match the branding */
+    text-align: center;
+  }
+  
+  /* Container for each option */
+  .optionContainer {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #333; /* Subtle border for separation */
+    border-radius: 4px;
+    background-color: #222; /* Slightly lighter background for options */
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  /* Styling for each option text */
+  .optionContainer span {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  /* Hover effect for the options */
+  .optionContainer:hover {
+    background-color: #333;
+    transform: scale(1.02); /* Slight zoom effect */
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .stepContainer {
+      padding: 0.5rem;
+    }
+  
+    .stepHeading {
+      font-size: 1.2rem;
+    }
+  
+    .optionContainer {
+      padding: 0.4rem;
+    }
+  
+    .optionContainer span {
+      font-size: 0.9rem;
+    }
+  }
+  
